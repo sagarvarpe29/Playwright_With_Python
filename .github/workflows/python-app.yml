@@ -30,6 +30,9 @@ jobs:
         python -m pip install playwright
     - name: Ensure playwright browsers are installed
       run: python -m playwright install
+    - name: Test with pytest
+      run: |
+        HEADLESS=true pytest
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
