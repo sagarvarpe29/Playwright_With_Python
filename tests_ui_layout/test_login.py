@@ -3,17 +3,17 @@ from playwright.sync_api import sync_playwright, Playwright
 
 @pytest.mark.smoke
 @pytest.mark.regression
-#@pytest.mark.parametrize("email, password", [("symon.storozhenko@gmail.com", "test123"),
-#                                             ("test@gmail.com","1234"),
-#                                             ("sagar@test.com", "sasasa")])
+@pytest.mark.parametrize("email, password", [("symon.storozhenko@gmail.com", "test123"),
+                                             ("test@gmail.com","1234"),
+                                             ("sagar@test.com", "sasasa")])
 
-@pytest.mark.parametrize("email", ["symon.storozhenko@gmail.com",
-                                   "test@gmail.com",
-                                   "sagar@test.com"])
+#@pytest.mark.parametrize("email", ["symon.storozhenko@gmail.com",
+#                                   "test@gmail.com",
+#                                   "sagar@test.com"])
 
-@pytest.mark.parametrize("password", ["test123",
-                                      "1234",
-                                      "sasasa"])
+#@pytest.mark.parametrize("password", ["test123",
+#                                      "1234",
+#                                      "sasasa"])
 
 def test_login(set_up, email, password) -> None:
     page = set_up
